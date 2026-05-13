@@ -1,32 +1,20 @@
 # JetMeme
 
-JetMeme is an unofficial JetBrains IDE plugin that plays a user-configured local sound when errors appear.
+このプラグインは、GoLandをやかましくします。
 
-The repository intentionally does not include meme sounds or third-party audio files.
+## 使い方
 
-## Current status
+GoLandの設定から、JetMemeを有効にしてください。
+`.wav`ファイルを含むディレクトリを選択すると、GoLandのイベントに合わせて音が鳴ります。
 
-This project is at the initial implementation stage.
+対応イベント:
 
-Implemented:
+- エディタ上のエラー
+- Run Configurationの失敗
+- Terminalコマンドの失敗
 
-- Detect editor error highlights after IDE analysis finishes.
-- Let users choose a local sound file from `Settings | Tools | JetMeme`.
-- Play a configured local WAV file when errors appear.
-- Add an enable toggle and cooldown to avoid repeated playback spam.
+サイドバーのJetMemeタブから、音のテスト再生、停止、イベントごとのON/OFF切り替えができます。
 
-Planned:
-
-- Add broader audio format support.
-- Refine error detection behavior after real-world GoLand testing.
-
-## Sound files
-
-JetMeme does not include meme sounds or third-party audio files.
-
-Users can configure their own local sound files. Make sure you have the necessary rights or permissions for any audio file you use.
-
-The first implementation is intended for WAV files. Other formats may depend on runtime audio codec support.
 
 ## Development
 

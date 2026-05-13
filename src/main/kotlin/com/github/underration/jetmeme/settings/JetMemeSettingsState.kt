@@ -11,7 +11,9 @@ import com.intellij.openapi.components.Storage
 class JetMemeSettingsState : PersistentStateComponent<JetMemeSettingsState.State> {
 
     data class State(
-        var enabled: Boolean = true,
+        var editorErrorsEnabled: Boolean = true,
+        var runFailuresEnabled: Boolean = true,
+        var terminalFailuresEnabled: Boolean = true,
         var soundFilePath: String = "",
         var cooldownMillis: Long = 5_000,
     )

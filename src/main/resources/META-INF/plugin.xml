@@ -11,12 +11,21 @@
     <depends>com.intellij.modules.platform</depends>
 
     <depends>org.jetbrains.plugins.go</depends>
+    <depends>org.jetbrains.plugins.terminal</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationConfigurable
                 instance="com.github.underration.jetmeme.settings.JetMemeSettingsConfigurable"
                 id="jetmeme.settings"
                 displayName="JetMeme"/>
+        <toolWindow
+                id="JetMeme"
+                anchor="right"
+                factoryClass="com.github.underration.jetmeme.toolwindow.JetMemeToolWindowFactory"/>
         <postStartupActivity implementation="com.github.underration.jetmeme.startup.JetMemeProjectActivity" />
+    </extensions>
+
+    <extensions defaultExtensionNs="org.jetbrains.plugins.terminal">
+        <toolWindowInitializer implementation="com.github.underration.jetmeme.terminal.JetMemeTerminalFailureWatcher"/>
     </extensions>
 </idea-plugin>

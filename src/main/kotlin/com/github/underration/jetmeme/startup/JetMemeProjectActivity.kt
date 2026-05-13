@@ -4,12 +4,14 @@ import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.ProjectActivity
 import com.github.underration.jetmeme.errors.JetMemeErrorWatcher
+import com.github.underration.jetmeme.execution.JetMemeExecutionWatcher
 
 class JetMemeProjectActivity : ProjectActivity {
 
     override suspend fun execute(project: Project) {
         LOG.info("JetMeme loaded for project: ${project.name}")
         JetMemeErrorWatcher(project).start(project)
+        JetMemeExecutionWatcher(project).start(project)
     }
 
     companion object {

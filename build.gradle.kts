@@ -13,6 +13,7 @@ dependencies {
     intellijPlatform {
         goland("2026.1.1")
         bundledPlugin("org.jetbrains.plugins.go")
+        bundledPlugin("org.jetbrains.plugins.terminal")
         testFramework(TestFrameworkType.Platform)
     }
 }

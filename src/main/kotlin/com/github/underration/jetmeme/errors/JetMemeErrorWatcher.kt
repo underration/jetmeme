@@ -57,7 +57,7 @@ class JetMemeErrorWatcher(
 
     private fun playIfAllowed() {
         val settings = JetMemeSettingsState.getInstance().state
-        if (!settings.enabled || settings.soundFilePath.isBlank()) return
+        if (!settings.editorErrorsEnabled || settings.soundFilePath.isBlank()) return
 
         val now = System.currentTimeMillis()
         val previous = lastPlayedAt.get()
