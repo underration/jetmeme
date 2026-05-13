@@ -13,6 +13,10 @@
     <depends>org.jetbrains.plugins.go</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable
+                instance="com.github.underration.jetmeme.settings.JetMemeSettingsConfigurable"
+                id="jetmeme.settings"
+                displayName="JetMeme"/>
         <postStartupActivity implementation="com.github.underration.jetmeme.startup.JetMemeProjectActivity" />
     </extensions>
 </idea-plugin>

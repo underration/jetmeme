@@ -6,20 +6,27 @@ The repository intentionally does not include meme sounds or third-party audio f
 
 ## Current status
 
-This project is at the initial scaffold stage.
+This project is at the initial implementation stage.
 
-Planned first features:
+Implemented:
 
-- Detect IDE/editor error events.
-- Let users choose a local `.wav`, `.mp3`, or `.aiff` file.
-- Play the configured sound when an error appears.
-- Add a mute toggle and basic cooldown to avoid repeated playback spam.
+- Detect editor error highlights after IDE analysis finishes.
+- Let users choose a local sound file from `Settings | Tools | JetMeme`.
+- Play a configured local WAV file when errors appear.
+- Add an enable toggle and cooldown to avoid repeated playback spam.
+
+Planned:
+
+- Add broader audio format support.
+- Refine error detection behavior after real-world GoLand testing.
 
 ## Sound files
 
 JetMeme does not include meme sounds or third-party audio files.
 
 Users can configure their own local sound files. Make sure you have the necessary rights or permissions for any audio file you use.
+
+The first implementation is intended for WAV files. Other formats may depend on runtime audio codec support.
 
 ## Development
 
